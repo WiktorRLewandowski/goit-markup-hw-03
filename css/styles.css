@@ -9,7 +9,8 @@
   --header-footer-bg-clr: #2f303a;
   --header-banner-font-clr: #ffffff;
   --primary-bg-clr: #e5e5e5;
-  --secondary-bg-clr: #f5f4fa;
+  --section-bg-clr: #ffffff;
+  --secondary-section-bg-clr: #f5f4fa;
   --nav-bar-bg-clr: var(--primary-address-font-clr);
   --portfolio-bg-clr: var(--primary-address-font-clr);
   --porftolio-btn-inactive: #f5f4fa;
@@ -34,6 +35,7 @@ body {
 }
 
 .section {
+  background-color: var(--section-bg-clr);
   padding: 94px 0;
 }
 
@@ -108,6 +110,7 @@ body {
   line-height: 1.1428;
   letter-spacing: 0.02em;
   padding: 25px;
+  user-select: none;
 }
 .nav-bar .container {
   display: flex;
@@ -153,6 +156,7 @@ body {
 }
 .footer {
   padding: 60px;
+  user-select: none;
 }
 
 .header-banner h1 {
@@ -190,6 +194,7 @@ body {
   text-transform: uppercase;
 }
 .advantages .text {
+  color: var(--secondary-font-clr);
   font-size: 14px;
   line-height: 1.71;
 }
@@ -234,6 +239,7 @@ body {
 }
 
 /* portfolio */
+
 .portfolio {
   background-color: var(--header-banner-font-clr);
   margin-top: 80px;
