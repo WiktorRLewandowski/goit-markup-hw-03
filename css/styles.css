@@ -17,6 +17,36 @@
   --portfolio-fig-border: #eeeeee;
 }
 
+/* //////////////
+      
+      NAVIGATION
+      1. global styling
+        1.1. deleting base formatting
+      
+        2. hover decoration
+        
+        3. logo styling
+
+        4. navigation bar
+
+        5. the big banner and footer/address
+
+        6. button styling
+
+        7. sections
+          7.1.our advantages
+          7.2.area of expertise
+          7.3.section headings
+          7.4.our staff
+
+        8. portfolio page
+
+        9. "kontakt" page
+
+The code could be DRY'ied a lot in the flexbox department, but it's more convenient during project development leaving it the way it is
+
+//////////////////*/
+
 ::selection {
   background-color: var(--brand-clr);
 }
@@ -39,6 +69,7 @@ body {
   background-color: var(--section-bg-clr);
   padding: 94px 0;
 }
+
 .section-advantages {
   background-color: var(--section-bg-clr);
   padding-top: 101px;
@@ -57,6 +88,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .list figure {
   margin: 0;
   padding: 0;
@@ -69,6 +101,7 @@ h4,
 p {
   margin: 0;
   padding: 0;
+  margin-block: 0 0;
 }
 
 /*hover decoration*/
@@ -111,12 +144,15 @@ p {
   line-height: 1.1923;
   margin: 0;
 }
+
 .logo .logo-accent {
   color: var(--logo-accent-clr);
 }
+
 .logo-footer {
   color: var(--primary-address-font-clr);
 }
+
 .footer .logo {
   margin-bottom: 20px;
 }
@@ -140,10 +176,10 @@ p {
 
   padding: 25px;
 }
+
 .nav-bar .container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .navigation {
@@ -160,6 +196,7 @@ p {
   color: var(--secondary-font-clr);
   margin-left: auto;
 }
+
 .nav-bar .contact {
   display: inline-block;
   margin: 0 25px;
@@ -250,7 +287,9 @@ p {
   font-size: 14px;
   line-height: 1.1428;
   text-transform: uppercase;
+  margin-bottom: 9px;
 }
+
 .advantages .text {
   color: var(--secondary-font-clr);
   font-size: 14px;
@@ -260,10 +299,12 @@ p {
 /* area of expertise */
 
 .advantages .list,
-.aoe .list {
+.aoe .list,
+.staff-container .list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 30px;
+  justify-content: center;
 }
 
 .aoe .list {
@@ -287,12 +328,6 @@ p {
   background-color: var(--secondary-section-bg-clr);
 }
 
-.staff-container .list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .staff-box {
   background-color: var(--section-bg-clr);
   font-size: 16px;
@@ -303,13 +338,16 @@ p {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .staff-box h4 {
   font-weight: 500;
   margin-bottom: 10px;
 }
+
 .staff-box .text {
   color: var(--secondary-font-clr);
 }
+
 .staff-box figcaption {
   padding: 30px;
 }
@@ -331,12 +369,15 @@ p {
 .filter {
   display: flex;
   justify-content: center;
-}
-.portfolio .list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   margin-bottom: 34px;
+}
+
+.portfolio .cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  justify-content: center;
+  gap: 30px;
 }
 
 .portfolio-projects h4 {
@@ -345,14 +386,12 @@ p {
   line-height: 2;
   letter-spacing: 0.06em;
 }
+
 .portfolio-projects .text {
   color: var(--secondary-font-clr);
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-}
-.portfolio .gap {
-  gap: 30px;
 }
 
 /* kontakt */
